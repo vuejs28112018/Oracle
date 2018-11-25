@@ -1,0 +1,1 @@
+show in console how the class is added with a guid

@@ -1,0 +1,30 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+       <link href="styles.css" rel="stylesheet" />
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Conditionals</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+                
+                <button v-on:click="error = !error">Toggle error</button>
+                <button v-on:click="success = !success">Toggle success</button>
+                <!-- <p v-if="error" class="error">There has been an error</p>
+                <p v-else-if="success" class="success">Whooo, success :)</p> -->
+                <p v-show="error" class="error">There has been an error</p>
+                <p v-show="success" class="success">Whooo, success :)</p>
+          
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>
