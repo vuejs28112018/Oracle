@@ -1,0 +1,45 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Keyboard Events</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+
+                <h2>My age is: {{ age }}</h2>
+                <br><br>
+
+                <!-- 1. 
+                    for keyboard events and DOM events:
+                    https://www.w3schools.com/jsref/obj_keyboardevent.asp
+                -->
+
+                <p>Name: <input type="text" v-on:keyup="keyUpName()"/></p>
+                <p>Age: <input type="number" v-on:keyup="keyUpAge()"/></p>
+                <hr>
+                <br>
+                <p>Name: [click enter]<input type="text" v-on:keyup.enter="keyEnterName()"/></p>
+                <p>Age: pclick enter]<input type="number" v-on:keyup.enter="keyEnterAge()"/></p>
+                <hr>
+                <br>
+                <p>Name: [click alt + enter]<input type="text" v-on:keyup.alt.enter="keyEnterAltName()"/></p>
+                <p>Age: pclick alt + enter]<input type="number" v-on:keyup.alt.enter="keyEnterAltAge()"/></p>                
+
+                <!-- complete list:
+                     https://vuejs.org/v2/guide/events.html#Key-Modifiers
+                     scroll down to Key Modifiers
+                -->
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

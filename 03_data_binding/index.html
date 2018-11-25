@@ -1,0 +1,47 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    -->
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <P>Hello world!</P>
+                <h1>{{name}}</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+                <!-- 
+                    1. this will make an error
+                    in the console
+                <a href="{{website}}">Click to site</a>
+                                -->
+                <!-- 2. solution : use v-bind -->
+                <a v-bind:href="website">Click to site</a>                
+
+                <!-- 3. shorter -->
+                <br><br>
+                <a :href="website">Click to site</a>                
+
+                <!-- 4. binding to input -->
+                <br><br>
+                <input type="text" v-bind:value="name">
+
+                <!-- 5. web site as html element -->
+                <!-- not work like this -->
+                <br><br>
+                {{webLink}}
+
+                <!-- WORKS -->
+                <br><br>
+                <p v-html="webLink"></p>                
+
+        </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

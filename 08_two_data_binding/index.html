@@ -1,0 +1,37 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Keyboard Events</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+
+                <h2>My age is: {{ age }}</h2>
+                <br><br>
+
+                <!-- 1. 
+                    for keyboard events and DOM events:
+                    https://www.w3schools.com/jsref/obj_keyboardevent.asp
+                -->
+
+                <p>Name: <input type="text" v-model="name"/></p> <!-- better then key event and update manually inside a method -->
+                <p>Name : {{ name }}</p>
+                <p>Age: <input type="number" v-model="age"/></p>
+                <p>Age : {{ age }}</p>
+                <hr>
+                <br>
+
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

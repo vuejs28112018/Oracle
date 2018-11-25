@@ -1,0 +1,30 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    -->  
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+       <link href="styles.css" rel="stylesheet" /> 
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Events II</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+ 
+                <div id="canvas" v-on:mousemove="updateXY">
+                    {{x}} , {{y}}
+                </div>
+
+                <!-- short @ instead of v-on -->
+                <div id="canvas" @mousemove="updateXY">
+                    {{x}} , {{y}}
+                </div>                
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

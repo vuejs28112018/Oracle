@@ -1,0 +1,43 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Events</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+
+                <!-- 1. once -->
+                <h2>My age is: {{ age }}</h2>
+                <button v-on:click.once="age++">Add year</button><br>
+                <button v-on:click="age--">Subtract year</button>
+
+                <br><br>
+
+                <!-- 2. -->
+                <a href="https://vuejs.org/">Vue site  - works</a><br>
+                <a v-on:click="clickRef()" href="https://vuejs.org/">Vue site  - alert - works</a><Br>
+
+                <a v-on:click.prevent="clickRef()" href="https://vuejs.org/">Vue site  - alert - prevent browse</a>
+
+                <!-- for full list:
+                    https://it.vuejs.org/v2/guide/events.html
+                    scroll down to Event modifiers
+                -->
+
+				<!-- for mouse events and DOM events:
+                    https://www.w3schools.com/jsref/obj_mouseevent.asp
+                -->
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

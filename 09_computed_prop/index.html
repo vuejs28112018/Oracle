@@ -1,0 +1,44 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Computed Properties</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+
+                <!-- 1 -->
+                <button v-on:click="a++">Add to A inline js</button><br>
+                <button v-on:click="b++">Add to A inline js</button><br>
+                <p>A - {{ a }}</p>
+                <p>B - {{ b }}</p>
+                <br><br>
+                <hr>
+                <br>
+
+                <!-- 2 -->
+                <p>Add a to age by method - {{ addToA() }}</p>
+                <p>Add b to age by method - {{ addToB() }}</p>
+                <!-- look at the log!!! it calls both methods even when I only click on A!!! -->
+                <!-- because when value changes and will render everything!. solution? Computed -->
+                <br><br>
+                <hr>
+                <br>
+                <!-- 2 now only recalculate the computed!!! and only run when needed -->
+                <p>Add a to age by computed property - {{ addToA_cp }}</p>
+                <p>Add b to age by computed property - {{ addToB_cp }}</p>                
+
+
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

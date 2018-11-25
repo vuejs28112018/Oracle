@@ -1,0 +1,38 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+       <link href="styles.css" rel="stylesheet" />
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Dynamic CSS</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+                
+                <!-- v-bind:class = "{ JSON OBJECT } " -->
+                <!-- v-bind:class = "{ class-name : true/false, class-name : true/false } " -->
+                <!-- click on the div - will change colors from red to green -->
+                <div v-on:click="available = !available" v-bind:class="{available: available}">
+                    <span>Ryu</span>
+                </div> 
+                <h2>Example 2</h2>
+                <button v-on:click="nearby = !nearby">Toggle nearby</button>
+                <button v-on:click="available = !available">Toggle available</button>
+
+                <!-- computed which return a class for css! -->
+                <div v-bind:class="compClasses">
+                    <span>Ryu</span>
+                </div>
+          
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

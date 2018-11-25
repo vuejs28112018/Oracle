@@ -1,0 +1,39 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    --> 
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+
+    </HEAD>
+    <BODY>
+        <div id="app">
+                <h1>Events</h1>
+                <h2>{{ greet () }}</h2>
+                <hr>
+ 
+                <h2>My age is: {{ age }}</h2>
+                <button v-on:click="age++">Add year</button><br>
+                <button v-on:click="age--">Subtract year</button>
+
+                <br><br>
+                <button v-on:click="add1()">Add year - with method</button><br>
+                <button v-on:click="sub1()">Subtract year - with method</button>
+                      
+                <br><br>
+                <button v-on:click="add1">Add year - no ()</button><br>
+                <button v-on:click="sub1">Subtract year - no ()</button>                
+                <button @click="sub1">Subtract year - no ()</button>                
+
+                <br><br>
+                <button v-on:dblclick="dbladd">Add year dblClick</button><br>
+                <button v-on:dblclick="dblsub">Subtract year dblClick()</button>                
+
+            </div>
+
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>

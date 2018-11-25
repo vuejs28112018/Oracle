@@ -1,0 +1,27 @@
+<HTML>
+    <!-- 
+        1.
+        https://vuejs.org/v2/guide/ 
+        click installation > CDN
+    -->
+    <HEAD>
+       <TITLE>Vue</TITLE>
+       <!-- 2. -->
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>"
+
+    </HEAD>
+    <BODY>
+        <!-- 4. -->
+        <div id="app">
+                <P>Hello world!</P>
+                <h1>{{name}}</h1>
+                <h2>{{ greet () }}</h2>
+                <h2>{{ timeGreet ('Afternoon') }}</h2>
+                <h2>Hello {{ getName() }}</h2>
+        </div>
+
+        <h2>Does this work ?? {{ getName() }}</h2>
+        <!-- 3. -->
+        <script src="app.js"></script>
+    </BODY>
+ </HTML>
